@@ -1,0 +1,43 @@
+ALGORITHM checkpoint_algo_1
+VAR
+    str : STRING := "The best in the world.";
+    sentence_count : INTEGER := 0;  //Counts The Length of The Sentence
+    word_count : INTEGER := 1;      //Counts The Nbr of Words in The Sentence
+    vowel_count : INTEGER := 0;      //Counts The Nbr of Vowels in The Sentence
+    vowels : ARRAY_OF CHAR := ["a","e","i","o","u"];
+BEGIN
+        //Counts each caracter except space
+    FOR ( i: INTEGER :=0 ; i < str.length() ; i++ ) DO 
+
+        IF ( str[i] != " " or str[i] != "." ) THEN
+            sentence_count := sentence_count +1 ;
+            //sentence_count +=;
+
+        END_IF
+
+    END_FOR
+
+        //At every space occured means that we have one word
+    FOR i: INTEGER in str DO 
+
+        IF str[i] == " " THEN
+            word_count ++
+        END_IF
+
+    END_FOR
+
+        //Counts each caracter that exists in the array of vowels
+    FOR i in str DO
+
+        IF i in vowels THEN
+            vowel_count += ;
+        END_IF
+    
+    END_FOR
+
+        // Write the results
+
+        Write(sentence_count);
+        Write(word_count)
+        Write(vowel_count);
+END
